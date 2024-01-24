@@ -269,9 +269,7 @@ export const Edge: FC<EdgeProps> = ({
         curveOffset={curveOffset}
         animated={animated}
         color={
-          isSelected || active || isActive
-            ? theme.edge.activeFill
-            : theme.edge.fill
+          isSelected || active || isActive ? theme.edge.activeFill : edge.fill
         }
         curve={curve}
         curved={curved}
@@ -298,7 +296,7 @@ export const Edge: FC<EdgeProps> = ({
           color={
             isSelected || active || isActive
               ? theme.arrow.activeFill
-              : theme.arrow.fill
+              : edge.fill
           }
           length={arrowLength}
           opacity={selectionOpacity}
